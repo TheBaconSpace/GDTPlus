@@ -1,0 +1,12 @@
+{
+	"id": "GDTPlus",
+	"name": "GDT+",
+	"version": "1.0 Pre-Alpha 1",
+	"author": "KizzaGaming",
+	"description": "WIP",
+	"main": "./GDT+.js",
+	"dependencies": {
+		"gdt-modAPI": "0.1.x"
+		},
+	"image": ""
+}
