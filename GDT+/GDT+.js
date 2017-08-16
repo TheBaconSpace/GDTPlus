@@ -20,4 +20,3 @@ GDT.loadJs([
 Media.allScheduledStories.splice(0, 9);
 Media.allScheduledStories.splice(2, 32);
 Media.allScheduledStories.splice(3, 5);
-

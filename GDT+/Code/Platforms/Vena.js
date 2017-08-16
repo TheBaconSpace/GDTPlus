@@ -71,28 +71,28 @@ GDT.addEvent({
 		var company = GameManager.company;
 		
 		if (decision === 0) {
-			var OptionOne = new Notification({
+			var MasterVOptionOne = new Notification({
 				header : "Master V Specs",
 				text : "Master V Specs: \nCPU - Zileg X80 @ 4MHz\nSystem Memory - 8kB\nVideo Memory - 16kB\nDisplay - 256 x 192 with 32 on-screen colours\nSound - Tennessee Electronics SM98467",
 				image : MVImage,
 			});
-			var OptionOneA = new Notification({
+			var MasterVOptionOneA = new Notification({
 				header : "Industry News",
 				text : "Vena have announced they intend to release the new console {0}.".format(General.getETADescription("2/12/1", "3/2/3")),
 				image : MVImage,
 			});
-			company.activeNotifications.addRange(OptionOne.split());
-			company.activeNotifications.addRange(OptionOneA.split());
+			company.activeNotifications.addRange(MasterVOptionOne.split());
+			company.activeNotifications.addRange(MasterVOptionOneA.split());
 			return;
 		}
 		
 		if (decision === 1) {
-			var OptionTwo = new Notification({
+			var MasterVOptionTwo = new Notification({
 				header : "Industry News",
 				text : "Vena have announced they intend to release the new console {0}.".format(General.getETADescription("2/12/1", "3/2/3")),
 				image : MVImage,
 			});
-			company.activeNotifications.addRange(OptionTwo.split());
+			company.activeNotifications.addRange(MasterVOptionTwo.split());
 			return;
 		}
 	},
@@ -109,4 +109,66 @@ GDT.addEvent({
 			image : MVImage,
         });
     }
+});
+
+//Vena Gear
+GDT.addPlatform({
+	id : "GDT+.VGear",
+	name : "Vena Gear",
+	company : "Vena",
+	startAmount : 0.6,
+	unitsSold : 0.84,
+	licencePrize : 50000,
+	published : "4/2/4",
+	platformRetireDate : "8/4/1",
+	developmentCosts : 30000,
+	genreWeightings : [0.9, 0.8, 0.8, 0.9, 0.6, 1],
+	audienceWeightings : [0.9, 1, 0.8],
+	techLevel : 3,
+	iconUri : VGearImage,
+});
+
+GDT.addEvent({
+	id : "GDT+.VGear.Announcement",
+	date : "1/1/1",
+	//date : "4/1/2",
+	getNotification : function (company) {
+		return new Notification({
+			sourceId : "GDT+.VGear.Announcement",
+			header : "Industry News",
+			text : "Today Vena, creators of the popular Master V system, have announced a new console called the Vena Gear. This is a portable system aimed to compete against the Gameling from Ninvento.{n}A company spokesperson has stated that 'Unlike similar devices on the market which are crippled by their handheld nature, the Vena Gear offers the full power of the Master V in a portable package.{n}Would you like to view the specs for the Vena Gear?",
+			image : VGearImage,
+			options: ["View Specs", "Ignore Specs"],
+		});
+	},
+	
+	complete : function (decision) {
+		var company = GameManager.company;
+		
+		if (decision === 0) {
+			var OptionOne = new Notification({
+				header : "Vena Gear Specs",
+				text : "Vena Gear Specs: \nCPU - Zileg X80 @ 3.5MHz\nSystem Memory - 8kB\nVideo Memory - 16kB\nDisplay - 160 x 144 with 32 on-screen colours (4096 colours total)\nSound - Tennessee Electronics SM98467\nPower - 6 AA batteries (3 to 5 hour battery life)",
+				image : VGearImage,
+			});
+			var OptionOneA = new Notification({
+				header : "Industry News",
+				text : "Vena have stated they hope the console will be able to topple the Gameling, and the intend to launch the device {0}.".format(General.getETADescription("4/1/2", "4/2/4")),
+				image : VGearImage,
+			});
+			company.activeNotifications.addRange(OptionOne.split());
+			company.activeNotifications.addRange(OptionOneA.split());
+			return;
+		}
+		
+		if (decision === 1) {
+			var OptionTwo = new Notification({
+				header : "Industry News",
+				text : "Vena have stated they hope the console will be able to topple the Gameling, and the intend to launch the device {0}.".format(General.getETADescription("4/1/2", "4/2/4")),
+				image : VGearImage,
+			});
+			company.activeNotifications.addRange(OptionTwo.split());
+			return;
+		}
+	},
 });
