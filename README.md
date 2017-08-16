@@ -12,5 +12,5 @@ This is the unstable branch of GDT+. This code will contain the latest features,
 ## Current Features
 WIP
 
-## Current Release
+## Current Unstable Release
 1.0 Pre-Alpha 1
