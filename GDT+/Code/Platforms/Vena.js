@@ -33,7 +33,7 @@ GDT.addPlatform({
 		}
 	],
 	unitsSold : 0.7,
-	licencePrize : 80000,
+	licencePrize : 90000,
 	published : "3/2/3",
 	platformRetireDate : "11/3/4",
 	developmentCosts : 30000,
