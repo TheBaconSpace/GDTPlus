@@ -1,4 +1,4 @@
-# GDT+
+# GDT+ [![GitHub followers](https://img.shields.io/github/followers/KizzaGaming.svg?style=social&label=Follow)](https://github.com/KizzaGaming)
 
 ## What is GDT+ 
 
